@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute', 'ui.calendar', 'ui.bootstrap']);
 
     app.config(['$routeProvider', function($routeProvider) {
           $routeProvider.
@@ -16,14 +16,6 @@ var app = angular.module('myApp', ['ngRoute']);
     }]);
 
     app.controller('indexController', function($scope) {
-        $scope.error = false;
-    });
-    
-    app.controller('calendarController', function($scope) {
-        $scope.error = false;
-    });
-
-    app.controller('eventsController', function($scope) {
         $scope.error = false;
     });
 
