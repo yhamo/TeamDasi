@@ -1,4 +1,6 @@
-<section id="directives-calendar" ng-controller="theCalendarController">
+<!--<iframe src="https://calendar.google.com/calendar/embed?src=mguv1jjj2gcqr2rnnb6drp94rial2pkg%40import.calendar.google.com&ctz=Europe/Paris" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+-->
+<section id="directives-calendar" ng-controller="calendarController">
     <div class="page-header">
         <h1>Calendar</h1>
     </div>
@@ -16,44 +18,17 @@
                 </div>
             </div>
 
-            <div class="span8">
-                <tabset>
-                    <tab select="renderCalender('myCalendar1');">
-                        <tab-heading>
-                            <i class="glyphicon glyphicon-bell"></i> Calendar One
-                        </tab-heading>
-                        <div class="alert-success calAlert" ng-show="alertMessage !== undefined && alertMessage !== ''">
-                            <h4>{{alertMessage}}</h4>
-                        </div>
-                        <div class="btn-toolbar">
-                            <p class="pull-right lead">Calendar One View Options</p>
-                            <div class="btn-group">
-                                <button class="btn btn-success" ng-click="changeView('agendaDay', 'myCalendar1')">AgendaDay</button>
-                                <button class="btn btn-success" ng-click="changeView('agendaWeek', 'myCalendar1')">AgendaWeek</button>
-                                <button class="btn btn-success" ng-click="changeView('month', 'myCalendar1')">Month</button>
-                            </div>
-                        </div>
-                        <div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
-                    </tab>
-                </tabset>
-            </div>
+            
+                <div class="btn-toolbar">
+                    <div class="btn-group">
+                        <button class="btn btn-success" ng-click="changeView('agendaDay', 'myCalendar1')">AgendaDay</button>
+                        <button class="btn btn-success" ng-click="changeView('agendaWeek', 'myCalendar1')">AgendaWeek</button>
+                        <button class="btn btn-success" ng-click="changeView('month', 'myCalendar1')">Month</button>
+                    </div>
+                </div>
+                <div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
+                    
+            
         </div>
     </div>
 </section>
-
-<script type="text/javascript">
-
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-17352735-3']);
-            _gaq.push(['_trackPageview']);
-
-            (function () {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript';
-                ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(ga, s);
-            })();
-
-</script>

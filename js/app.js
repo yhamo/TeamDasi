@@ -15,8 +15,4 @@ var app = angular.module('myApp', ['ngRoute', 'ui.calendar', 'ui.bootstrap']);
             });
     }]);
 
-    app.controller('indexController', function($scope) {
-        $scope.error = false;
-    });
-
 

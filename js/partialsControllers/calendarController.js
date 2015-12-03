@@ -1,11 +1,5 @@
-app.controller('calendarController', function($scope) {
-    $scope.error = false;
-});
-
-
-app.controller('theCalendarController', CalendarCtrl);
-
-function CalendarCtrl($scope, $compile, $timeout, uiCalendarConfig) {
+app.controller('calendarController', ['$scope','$compile','$timeout','uiCalendarConfig', function($scope, $compile, $timeout, uiCalendarConfig) {
+    
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -121,4 +115,5 @@ function CalendarCtrl($scope, $compile, $timeout, uiCalendarConfig) {
     /* event sources array*/
     $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
     $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
-}
+
+}]);
