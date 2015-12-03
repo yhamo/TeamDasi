@@ -1,3 +1,13 @@
+<?php
+	session_start();
+	require("./connection.php");
+	$bdd =connexion_db();
+	
+	$req= $bdd->prepare('SELECT numVIP, nom, prenom from VIP');
+	$req->execute() or die(print_r($req->errorInfo()));
+	$ligne=$req->fetch(PDO::FETCH_ASSOC);
+	$count = $req->rowCount();
+?>
 <!DOCTYPE html>
 <html ng-app="myApp" lang="en-US">
     <head>

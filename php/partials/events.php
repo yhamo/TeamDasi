@@ -1,4 +1,4 @@
-<section id="directives-calendar" ng-controller="theCalendarController">
+<section id="directives-calendar" ng-controller="calendarController">
     <div class="page-header">
         <h1>Events</h1>
     </div>
